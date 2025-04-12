@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jeopardy Spiel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Jeopardy Spiel 🎮</h1>
+  <div id="current-player">Spieler: ...</div>
+
+  <div class="board" id="game-board">
+    <!-- Spielfeld wird dynamisch per JS gefüllt -->
+  </div>
+
+  <div class="question-box" id="question-box" style="display: none;">
+    <div id="question" class="question"></div>
+    <div id="points" class="points"></div>
+    <div id="timer" class="timer">30</div>
+
+    <div id="answer-container">
+      <button onclick="showAnswer()">🕵️‍♂️ Antwort anzeigen</button>
+      <div id="answer-reveal" style="margin-top:10px; display:none; font-weight:bold;"></div>
+
+      <div id="confirm-buttons" style="display:none; margin-top:10px;">
+        <button onclick="checkAnswer('correct')">✅ Richtig</button>
+        <button onclick="checkAnswer('wrong')">❌ Falsch</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="scoreboard">
+    <h2>Punktestand 📊</h2>
+    <div id="players-scores"></div>
+  </div>
+
+  <button id="reset-button" onclick="resetGame()">🔄 Spiel zurücksetzen</button>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
