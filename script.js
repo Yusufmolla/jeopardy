@@ -1,5 +1,5 @@
 let playerIndex = 0;
-const players = ['Bekir', 'Nastja', 'Fatih', 'Kerem', 'Yusuf', 'Leyla'];
+const players = ['Bekir', 'Nastja', 'Fatih', 'Kerem', 'Yusuf', 'Leyla', 'Turgay', 'Faruk'];
 let scores = Array(players.length).fill(0);
 let timer;
 let timeLeft = 30;
